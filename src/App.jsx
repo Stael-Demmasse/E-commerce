@@ -1,35 +1,102 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import  facebook from './assets/facebook.svg';
+import  twitter from './assets/twitter.svg';
+import  instagram from './assets/instagram.svg';
+import  userImg from './assets/user-icon.svg';
+import  registerImg from './assets/edit.svg';
+import  cartImg from './assets/cart.svg';
+import  LogoImg from './assets/Samyra Brownies.jpg';
+import PhoneImg from './assets/phone.svg';
+import clockImg from './assets/clock.svg';
 import './App.css'
 
-function App() {
-  const [count, setCount] = useState(0)
 
+function Header() {
+
+ 
+  
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <header className="header">
+
+      <div className="top-header">
+
+          <img src= {facebook} alt="Facebook" className='icons'/>
+          <img src= {twitter} alt="Twitter" className='icons'  />
+          <img src= {instagram} alt="Instagram" className='icons'/>
+
+          <div className="items-right">
+          <img src={userImg} alt="User" className='icons1'/>
+          <a href="#">Log in</a>
+          <img src={registerImg} alt="registration" className='icons1'/>
+          <a href="#">Register</a>
+          <img src={cartImg} alt="Cart" className='icons1'/>
+          <span className='cart-count'>0 items - ($(preis))</span>
+
+          </div>
+
+    	</div>
+
+      <div className="end-header">
+
+      <img src= {LogoImg} alt="log" className='icons2 anime'/>
+
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+
+      <div className='contact'>
+
+        <div className='phone-info'>
+           <img src={PhoneImg} alt="Phone" />
+           <span > <strong>call us: (+49) 123 456 789</strong></span>
+        </div>
+          <span> email: info@samyrabrownies</span>
+     </div>
+     
+     <div className='contact1'>
+       
+        <div className='clock-info'>
+           <div className='info'>
+                <img src={clockImg} alt="time" className="clock-icon"/>
+                <span > <strong>    Working Hours        </strong></span>
+           </div>
+           
+           <span> Mon - Sat (9.00am - 15.00am) </span>
+        </div>
+         
+     </div>
+    
+      <div className='bottom-header'>
+
+        <nav className="navbar">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Contact us</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">Services</a></li>
+          </ul>
+          </nav>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+
+    
+      
+    </header>
   )
+}
+
+
+
+function App() {
+ 
+  return (
+      <div>
+        <Header />
+
+
+      </div>
+  );
 }
 
 export default App
